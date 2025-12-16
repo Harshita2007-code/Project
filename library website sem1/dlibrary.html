@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .categories{
+            width:50%;
+            margin:auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+            gap:30px;
+            margin-bottom:50px;
+        }
+        .category-card{
+            background:white;
+            border-radius:18px;
+            padding:25px 15px;
+            text-align:center;
+            box-shadow:0 5px 22px rgba(8, 1, 19, 0.241);
+            transition:0.3s ease;
+        }
+        .category-card:hover{
+            box-shadow:0 10px 25px rgba(0, 0, 0, 0);
+        }
+        .category-card .emoji{
+            font-size:80px;
+            margin-bottom:15px;
+        }
+        .category-card h3{
+            font-size:30px;
+            color:#020b3c;
+            margin-bottom:10px;
+        }
+        .category-card p{
+            font-size:20px;
+            color:#555555;
+            margin-bottom:15px;
+        }
+        .category-card a{
+            font-size: 18px;
+            text-decoration:none;
+            display:inline-block;
+            padding:10px 18px;
+            background:#0058d3;
+            color:white;
+            border-radius:9px;
+        }
+        .category-card a:hover{
+            background:#2d6af8;
+        }
+        @media(max-width:600px){
+            nav ul{
+                flex-direction:column;
+                text-align:center;
+                padding:10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>EXPLORE BOOKS</h1>
+<nav>
+    <h2>DIGITAL LIBRARY</h2>
+    <a href="Home.html">Home |</a>
+    <a href="dlibrary.html">Digital library |</a>
+    <a href="Register.html">Register |</a>
+    <a href="service.html">Additional services |</a>
+    <a href="contact.html">Contact Us |</a>
+    <a href="feedback.html">Feedback |</a>
+</nav>
+
+<div class="header">
+    <h1>📚 Welcome to My Digital Library</h1>
+    <p>Access e-books, audiobooks, and online learning resources.</p>
+    <p>Explore books across different genres — Fiction, Kids, Thriller, Literary, Biography, Humour and Technology</p>
+</div>
+
+<div class="categories">
+
+    <div class="category-card">
+        <div class="emoji">📖</div>
+        <h3>Literary Fiction</h3>
+        <p>Immerse yourself in exciting fictional worlds and stories.</p>
+        <a href="fiction.html">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <div class="emoji">🧸</div>
+        <h3>Kids</h3>
+        <p>Fun, colorful, and magical stories for young readers.</p>
+        <a href="kids.html">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <div class="emoji">🕵️‍♂️</div>
+        <h3>Thriller & Mystery</h3>
+        <p>Page-turners full of suspense, secrets, and intrigue.</p>
+        <a href="thriller.html">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <div class="emoji">👑</div>
+        <h3>Biography & Memoir</h3>
+        <p>Real-life stories of inspiring people and leaders.</p>
+        <a href="biography.html">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <div class="emoji">😂</div>
+        <h3>Humour</h3>
+        <p>Laugh out loud with funny and witty books.</p>
+        <a href="humour.html">Explore</a>
+    </div>
+
+    <div class="category-card">
+        <div class="emoji">💻</div>
+        <h3>Technology</h3>
+        <p>Learn about tech, programming, AI, and innovations.</p>
+        <a href="technology.html">Explore</a>
+    </div>
+</div>
+  <footer>
+    <p>&copy; 2025 My Books Library | Designed by Harshita</p>
+  </footer>
+
+</body>
+</html>

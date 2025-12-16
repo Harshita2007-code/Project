@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .container {
+            width: 40%;
+            margin: 60px auto;
+            background: rgb(226, 227, 234);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow:0px 0px 15px rgba(0, 0, 0, 0.296);
+        }
+        h2 {
+            text-align: center;
+            color: #002345;
+        }
+        pre{
+            text-align: center;
+            font-size: larger;
+            font-weight: bold;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        label {
+            font-size: 17px;
+            color: #003366;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 95%;
+            padding: 12px;
+            margin:8px;
+            border: 2px solid #8b8b8c;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            background: #014386;
+            color: white;
+            font-size: 19px;
+            cursor:pointer;
+        }
+        .button:hover {
+            background: #ffcc00;
+            color: black;
+            cursor:pointer;
+            display:block;
+        }
+        .box{
+            width:95%;
+            margin:8px;
+            border:2px solid #8b8b8c;
+            padding:12px;
+            border-radius:6px;
+            background-color: #FFFFFF;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+            background: #014b95;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>CONTACT US</h1>
+    <nav>
+        <h2>CONTACT</h2>
+        <a href="Home.html">Home |</a>
+        <a href="dlibrary.html">Digital library |</a>
+        <a href="Register.html">Register |</a>
+        <a href="service.html">Additional services |</a>
+        <a href="contact.html">Contact Us |</a>
+        <a href="feedback.html">Feedback |</a>
+    </nav>
+
+    <pre>
+        ADDRESS : Ennerdale Civic center, Gauteng
+        EMAIL : mylibrarysupport@email.com           
+        PHONE : +2348135531603   
+        <br>                    
+        <b>FOLLOW US</b><br>
+        <img src="https://www.bookswagon.com/images/staticimages/instagram.png"><a>  instagram.com/ebook2025</a>
+        <img src="https://www.bookswagon.com/Images/staticimages/twitter.png"><a>  twitter.com/ebook25?lang=en</a>
+        <img src="https://www.bookswagon.com/images/staticimages/youtube.png"><a>  youtube.com/ebook_25</a>
+    </pre><hr>
+
+    <div class="container">
+        <h2>HELP CENTER - SUBMIT A REQUEST</h2>
+
+        <label>Your Preferred Name*</label>
+        <input type="text" id="name" placeholder="Enter name" required>
+
+        <label>Email*</label>
+        <input type="email" id="email" name="email" placeholder="Enter valid email address" required>
+
+        <label>Order Number*</label>
+        <input type="num" id="order" name="order" placeholder="Enter your respective order number" required>
+
+        <label>Attach a File*</label>
+        <div class="box">
+            <input type="file" id="file">
+        </div>
+
+        <label>Message</label>
+        <textarea placeholder="Any message...."></textarea>
+
+        <button class="button">Send Message</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Books Library | Designed by Harshita</p>
+    </footer>
+</body>
+</html>

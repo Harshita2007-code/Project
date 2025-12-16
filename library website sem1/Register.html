@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        h2 {
+            color: #02419f;
+            text-align: center;
+        }
+        .form-box {
+            width: 350px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid gray;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2b4c7e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor:pointer;
+        }   
+        button:hover {
+            background: #1f3a61;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 4px;
+            background: #014b95;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>REGISTER</h1>
+    <nav>
+        <h2>TO REGISTER</h2>
+        <a href="Home.html">Home |</a>
+        <a href="dlibrary.html">Digital library |</a>
+        <a href="Register.html">Register |</a>
+        <a href="service.html">Additional services |</a>
+        <a href="contact.html">Contact Us |</a>
+        <a href="feedback.html">Feedback |</a>
+    </nav>
+    <br>
+    <section id="register">
+    <form class="form-box">
+        <h2>Register</h2>
+        <label>Full Name</label>
+        <input type="text" placeholder="Full Name" required>
+        <label>Email</label>
+        <input type="text" placeholder="Email" required>
+        <label>Phone Number</label>
+        <input type="text" placeholder="Phone Number" required>
+        <label>Create Card Number</label>
+        <input type="text" placeholder="Create Card Number" required>
+        <label>Create Password</label>
+        <input type="password" placeholder="Create Password" required>
+        <label>Confirm Password*</label>
+        <input type="password" placeholder="Confirm Password" required>
+        <button>Register Now</button>
+        <p>Already Registered ? <a href="Login.html">Login</a></p>
+    </form>
+    <footer>
+        <p>&copy; 2025 My Books Library | Designed by Harshita</p>
+    </footer>
+</section>
+</body>
+</html>

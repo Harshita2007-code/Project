@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | My Library</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .feedback-container{
+            width:100%;
+            max-width:700px;
+            margin:40px auto;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 3px 15px rgba(0,0,0,0.15);
+        }
+        .feedback-container h2{
+            text-align:center;
+            color:#1b2141;
+            margin-bottom:20px;
+        }
+        .feedback-container label{
+            font-weight:bold;
+            color:#1b2141;
+        }
+        .input-box{
+            width:95%;
+            padding:12px;
+            margin-top:5px;
+            margin-bottom:20px;
+            border-radius:10px;
+            border:1px solid #504f59;
+            font-size:16px;
+        }
+        textarea{
+            height:130px;
+            resize:none;
+        }
+        .btn{
+            display:block;
+            width:100%;
+            padding:12px;
+            background:#2a36e0;
+            color:white;
+            border:none;
+            font-size:18px;
+            border-radius:10px;
+            cursor:pointer;
+        }
+        .btn:hover{
+            background:#1b2141;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>RATE US</h2>
+        <a href="Home.html">Home |</a>
+        <a href="dlibrary.html">Digital library |</a>
+        <a href="Register.html">Register |</a>
+        <a href="service.html">Additional services |</a>
+        <a href="contact.html">Contact Us |</a>
+        <a href="feedback.html">Feedback |</a>
+    </nav>
+
+<div class="header">
+    <h1>💬 Feedback</h1>
+    <p>Your opinion helps us improve! Please share your thoughts.</p>
+</div>
+
+<div class="feedback-container">
+    <h2>We Would Love to Hear From You!❤️</h2>
+
+    <form>
+        <label>Your Name</label><br>
+        <input type="text" class="input-box" placeholder="Enter your name" required>
+
+        <label>Email</label><br>
+        <input type="email" class="input-box" placeholder="Enter your email" required>
+
+        <label>Rate Your Experience</label><br>
+        <select class="input-box">
+            <option>⭐⭐⭐⭐⭐ Excellent</option>
+            <option>⭐⭐⭐⭐ Good</option>
+            <option>⭐⭐⭐ Average</option>
+            <option>⭐⭐ Poor</option>
+            <option>⭐ Very Poor</option>
+        </select>
+
+        <label>Your Feedback</label><br>
+        <textarea class="input-box" placeholder="Write your feedback here..."></textarea>
+
+        <button class="btn">Submit Feedback</button>
+    </form>
+</div>
+
+<footer>
+    © 2025 My Digital Library| Created by Harshita Bhardwaj| All Rights Reserved
+</footer>
+
+</body>
+</html>
