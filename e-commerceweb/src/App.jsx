@@ -1,7 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 function App() {
-  const [cart, setCart] = useState(0);
+  const[showCart, setShowCart] = useState(false);
+  const [cart, setCart] = useState([]);
   const products = [
     {
       id: 1,
@@ -53,9 +54,9 @@ function App() {
     },
     {
       id: 9,
-      name: "Baby Monitor",
+      name: "Gaming Keyboard",
       price: "₹2,699",
-      image: "https://www.vava.com/cdn/shop/files/vava-720p-baby-monitor-with-night-light.png?v=1741942571"
+      image: "https://m.media-amazon.com/images/I/714Y4KXLVPL._AC_SL1500_.jpg"
     },
     {
       id: 10,
@@ -65,34 +66,91 @@ function App() {
     }
   ];
 
-  function addToCart() {
-    setCart(cart + 1);
+  function addToCart(product) {
+    const existingItem = cart.find(
+      (item) => item.id === product.id
+    );
+    if (existingItem) {
+      const updatedCart = cart.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+      setCart(updatedCart);
+     } else {
+      setCart([
+        ...cart,
+        { ...product, quantity: 1 }
+      ]);
+    }
   }
   return (
     <>
     <nav className="navbar">
-      <h1 className="logo">SHOPPYY</h1>
-      <div className="cart">
-        🛒 Cart ({cart})
+      <h1 className="logo">GadgetHub</h1>
+      <div className="cart"
+            onClick = {() => setShowCart(!showCart)}>
+        🛒 Cart ({cart.length})
       </div>
     </nav>
+
     <section className="container">
       <h2>LATEST GADGETS COLLECTION</h2>
       <p>Best electronic products at affordable prices.</p>
     </section>
+
     <div className="products">
-      {products.map((product) => (
-        <div className="card" key={product.id}>
-          <img src={product.image} alt={product.name} />
-          <h3>{product.name}</h3>
-          <p className="price">{product.price}</p>
-          <button onClick={addToCart}>
-            Add to Cart
+      {products.map((product) => {
+        const cartProduct = cart.find(
+            (item) => item.id === product.id
+          );
+          return (
+            <div className="card" key={product.id}>
+              <img src={product.image} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p className="price">{product.price}</p>
+              <button onClick={() => addToCart(product)}>
+                Add to Cart
+              </button>
+              {cartProduct && (
+                <p className="quantity">
+                  Added: +{cartProduct.quantity}
+                </p>
+              )}
+        </div>
+          );
+    })}
+    </div>
+
+    {showCart && (
+      <div className="cart-popup">
+        <div className="cart-header">
+          <h2>Your Cart</h2>
+          <button
+            className="close-btn"
+            onClick={() => setShowCart(false)}
+          >
+          X
           </button>
         </div>
-    ))}
-    </div>
+        {cart.length === 0 ? (
+          <p>Cart is Empty</p>
+        ) : (
+        cart.map((item) => (
+          <div className="cart-item" key={item.id}>
+            <img src={item.image} alt={item.name} />
+          <div>
+          <h4>{item.name}</h4>
+          <p>{item.price}</p>
+            <p>Quantity: {item.quantity}</p>
+          </div>
+        </div>
+      ))
+    )}
+  </div>
+)}
     </>
   );
 }
+
 export default App;
