@@ -32,7 +32,7 @@ function App() {
       id: 5,
       name: "DSLR Camera",
       price: "₹92,990",
-      image: "https://poojaelectronics.in/storage/2023/08/Nikon-D7500-DSLR-Camera-with-18-140mm-Lens-Online-Buy-India_01.jpg"
+      image: "https://content.jdmagicbox.com/quickquotes/images_main/sony-alpha-a68-dslr-camera-802417229-vl12bohx.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit"
     },
     {
       id: 6,
